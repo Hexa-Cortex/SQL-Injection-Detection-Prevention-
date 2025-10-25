@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login Demo</title>
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .info {
+            background: #d3f9d8;
+            border: 2px solid #51cf66;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            color: #2b8a3e;
+        }
+        
+        .info strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #51cf66;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #51cf66;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #40c057;
+        }
+        
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .links a {
+            color: #37b24d;
+            text-decoration: none;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .security-features {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        
+        .security-features h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .security-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .security-features li {
+            padding: 5px 0;
+            color: #495057;
+        }
+        
+        .security-features li:before {
+            content: "✓ ";
+            color: #51cf66;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            ✅ <strong>SECURE IMPLEMENTATION</strong>
+            Protected with parameterized queries and input validation!
+        </div>
+        
+        <h2>🔒 Secure Login</h2>
+        
+        <form action="/secure/login" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required maxlength="50">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required maxlength="100">
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="security-features">
+            <h4>Security Features:</h4>
+            <ul>
+                <li>Parameterized queries</li>
+                <li>Input validation</li>
+                <li>Real-time detection</li>
+                <li>Proper error handling</li>
+          </ul>
+        </div>
+        
+        <div class="links">
+            <a href="/">← Back to Home</a> | 
+            <a href="/vulnerable/login">Try Vulnerable Version →</a>
+        </div>
+    </div>
+</body>
+</html>
